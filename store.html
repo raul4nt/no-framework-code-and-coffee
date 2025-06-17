@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Code and Coffee - Cardápio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900|Crete+Round:400,400i&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- CSS Customizado -->
+  <link rel="stylesheet" href="css/header/header.css" />
+  <link rel="stylesheet" href="css/footer/footer.css" />
+  <link rel="stylesheet" href="css/store/store.css" />
+</head>
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        id="sidebarToggle"
+        aria-label="Abrir menu lateral"
+        title="Abrir menu lateral"
+      >
+        <span class="bi bi-list text-black"></span>
+      </button>
+
+      <div class="d-flex align-items-center">
+        <a
+          href="/"
+          class="me-3 logo-link"
+          aria-label="Página inicial Code and Coffee"
+          title="Página inicial Code and Coffee"
+        >
+          <img src="assets/logo.png" alt="Code and Coffee Logo" style="height: 40px" />
+        </a>
+        <div class="d-none d-lg-flex align-items-center">
+          <a href="/store" class="nav-link text-black me-3">MENU</a>
+          <a href="/our-coffee.html" class="nav-link text-black me-3">NOSSO CAFÉ</a>
+          <a href="/about-us.html" class="nav-link text-black me-3">SOBRE NÓS</a>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center search-container">
+        <button
+          id="searchToggle"
+          class="d-flex align-items-center me-3 btn-icon"
+          aria-label="Alternar barra de pesquisa"
+          title="Pesquisar"
+        >
+          <i class="bi bi-search text-black"></i>
+        </button>
+
+        <div class="search-bar d-none" id="searchBar">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Buscar"
+            aria-label="Campo de busca de produtos"
+            id="searchInput"
+          />
+          <button class="btn btn-dark ms-2" id="searchBtn" aria-label="Buscar" title="Ok">
+            Ok
+          </button>
+        </div>
+
+        <div class="d-flex align-items-center" id="userSection">
+          <!-- Aqui o JS irá renderizar conteúdo dinâmico de login/logout -->
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <button
+        class="close-sidebar-btn"
+        id="closeSidebar"
+        aria-label="Fechar menu lateral"
+        title="Fechar menu"
+      >
+        <i class="bi bi-x-lg text-black"></i>
+      </button>
+    </div>
+    <ul class="sidebar-menu">
+      <li><a href="/store" class="sidebar-link">MENU</a></li>
+      <li><a href="/our-coffee.html" class="sidebar-link">NOSSO CAFÉ</a></li>
+      <li><a href="/about-us.html" class="sidebar-link">SOBRE NÓS</a></li>
+      <li class="logged-in-only"><a href="/my-orders" class="sidebar-link">MEUS PEDIDOS</a></li>
+      <li class="logged-in-only"><a href="#" id="accountLink" class="sidebar-link">MINHA CONTA</a></li>
+      <li class="logged-in-only"><a href="#" id="logoutLink" class="sidebar-link">SAIR</a></li>
+      <li class="logged-out-only"><a href="/login" class="sidebar-link">ENTRAR</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Conteúdo Principal -->
+  <div class="container text-center my-5">
+    <h1 class="display-5 fw-bold">Nosso Menu</h1>
+    <p class="lead">Sabores especiais feitos com paixão.</p>
+  </div>
+
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+      <!-- Produto: Affogato -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="assets/images/products/affogato.webp" class="card-img-top" alt="Affogato" />
+          <div class="card-body">
+            <h5 class="card-title">Affogato</h5>
+            <p class="card-text">Café expresso com sorvete de baunilha.</p>
+            <p class="fw-bold">R$ 12,00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produto: Americano -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="assets/images/products/americano.png" class="card-img-top" alt="Americano" />
+          <div class="card-body">
+            <h5 class="card-title">Americano</h5>
+            <p class="card-text">Café expresso com água quente.</p>
+            <p class="fw-bold">R$ 7,00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produto: Cappuccino -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="assets/images/products/cappuccino.png" class="card-img-top" alt="Cappuccino" />
+          <div class="card-body">
+            <h5 class="card-title">Cappuccino</h5>
+            <p class="card-text">Café expresso com leite e espuma cremosa.</p>
+            <p class="fw-bold">R$ 10,00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produto: Cold Brew -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="assets/images/products/coldbrew.webp" class="card-img-top" alt="Cold Brew" />
+          <div class="card-body">
+            <h5 class="card-title">Cold Brew</h5>
+            <p class="card-text">Café gelado coado a frio.</p>
+            <p class="fw-bold">R$ 11,50</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produto: Espresso -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="assets/images/products/espresso.png" class="card-img-top" alt="Espresso" />
+          <div class="card-body">
+            <h5 class="card-title">Espresso</h5>
+            <p class="card-text">Expresso intenso e concentrado.</p>
+            <p class="fw-bold">R$ 8,00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produto: Flat White -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="assets/images/products/flatwhite.png" class="card-img-top" alt="Flat White" />
+          <div class="card-body">
+            <h5 class="card-title">Flat White</h5>
+            <p class="card-text">Café expresso com leite vaporizado.</p>
+            <p class="fw-bold">R$ 9,50</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produto: Iced Coffee -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="assets/images/products/icedcoffee.webp" class="card-img-top" alt="Iced Coffee" />
+          <div class="card-body">
+            <h5 class="card-title">Iced Coffee</h5>
+            <p class="card-text">Café gelado com gelo e leite.</p>
+            <p class="fw-bold">R$ 10,00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produto: Latte -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="assets/images/products/latte.png" class="card-img-top" alt="Latte" />
+          <div class="card-body">
+            <h5 class="card-title">Latte</h5>
+            <p class="card-text">Leite vaporizado com café expresso.</p>
+            <p class="fw-bold">R$ 9,50</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produto: Macchiato -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="assets/images/products/macchiato.png" class="card-img-top" alt="Macchiato" />
+          <div class="card-body">
+            <h5 class="card-title">Macchiato</h5>
+            <p class="card-text">Café expresso com um toque de espuma.</p>
+            <p class="fw-bold">R$ 10,50</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produto: Mocha -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="assets/images/products/mocha.png" class="card-img-top" alt="Mocha" />
+          <div class="card-body">
+            <h5 class="card-title">Mocha</h5>
+            <p class="card-text">Café com chocolate e leite vaporizado.</p>
+            <p class="fw-bold">R$ 11,00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="links-row mb-4">
+        <a href="/store">Menu</a>
+        <a href="/our-coffee.html">Nosso Café</a>
+        <a href="/about-us.html">Sobre Nós</a>
+        <a
+          href="https://docs.github.com/en/site-policy/github-terms/github-terms-of-service"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Termos de Uso
+        </a>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-12 d-flex justify-content-between align-items-center ps-0">
+          <p>&copy; 2025 Code & Coffee – CNPJ 29.823.873/0001-57. Todos os direitos reservados.</p>
+          <div class="card-badges">
+            <img src="assets/images/footer/visa.png" alt="Visa" class="card-flag" />
+            <img src="assets/images/footer/mastercard.webp" alt="Mastercard" class="card-flag" />
+            <img src="assets/images/footer/elo.png" alt="Elo" class="card-flag" />
+            <img src="assets/images/footer/hipercard.svg" alt="Hipercard" class="card-flag" />
+            <img src="assets/images/footer/banrisul.jpg" alt="Banrisul" class="card-flag" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS customizado -->
+  <script src="js/header.js"></script>
+</body>
+</html>
