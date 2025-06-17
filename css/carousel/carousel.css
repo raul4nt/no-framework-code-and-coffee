@@ -1,0 +1,115 @@
+.carousel-section {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel-slide {
+  min-width: 280px;       /* Largura mínima consistente para cada slide */
+  margin-right: 20px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 180px;          /* Altura fixa para manter uniformidade */
+  object-fit: contain;    /* Mantém a proporção sem cortar a imagem */
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.carousel-slide h5 {
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.carousel-slide p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.carousel-slide strong {
+  font-size: 1rem;
+  color: #c9b037;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  background: rgba(0,0,0,0.3);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0 12px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 10;
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.carousel-button:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.carousel-button-left {
+  left: 10px;
+}
+
+.carousel-button-right {
+  right: 10px;
+}
+
+/* Responsividade */
+
+@media (max-width: 991.98px) {
+  .carousel-slide {
+    min-width: 220px;   /* reduz a largura para tablets */
+  }
+  .carousel-slide img {
+    height: 140px;      /* reduz altura da imagem */
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-slide {
+    min-width: 180px;   /* reduz a largura para telas pequenas */
+  }
+  .carousel-slide img {
+    height: 110px;      /* altura menor para telas pequenas */
+  }
+}
+
+@media (max-width: 479px) {
+  .carousel-slide {
+    min-width: 140px;   /* para celulares muito pequenos */
+    margin-right: 10px;
+  }
+  .carousel-slide img {
+    height: 90px;
+  }
+}
