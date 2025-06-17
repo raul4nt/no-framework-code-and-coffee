@@ -1,0 +1,58 @@
+/* css/product-details.css */
+
+.product-details-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .product-image-container img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-info h1 {
+    font-family: 'Crete Round', serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .product-info .price {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #2c5e4c; /* Um verde escuro, combine com sua identidade */
+    margin-bottom: 1.5rem;
+  }
+  
+  .product-info .section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #2c5e4c;
+    padding-left: 10px;
+  }
+  
+  .product-info p {
+    line-height: 1.7;
+  }
+  
+  .actions-container .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  /* Para telas menores, a imagem fica em cima */
+  @media (max-width: 767.98px) {
+    .product-image-container {
+      margin-bottom: 2rem;
+    }
+    .product-info h1 {
+      font-size: 2rem;
+    }
+    .product-info .price {
+      font-size: 2rem;
+    }
+  }

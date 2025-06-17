@@ -114,3 +114,113 @@
     align-items: center;
   }
 }
+
+/* ============================================== */
+/* === NOVOS ESTILOS PARA O RODAPÉ ROBUSTO ====== */
+/* ============================================== */
+
+.footer {
+  /* Aumentando o padding para acomodar mais conteúdo */
+  padding: 50px 0 20px 0;
+}
+
+/* Títulos das colunas do rodapé */
+.footer-heading {
+  font-family: 'Crete Round', serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Linha decorativa abaixo dos títulos */
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #c9b037; /* Cor de destaque do hover */
+}
+
+/* Estilos para a coluna da marca */
+.footer-brand-logo {
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.footer-brand-text {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Lista de links úteis */
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 10px;
+}
+
+.footer-links-list a {
+  font-size: 1rem;
+  color: #ccc;
+  padding: 0;
+}
+
+/* Informações de contato */
+.footer-contact-info p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-contact-info i {
+  color: #c9b037;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+/* Ícones de redes sociais */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: #ffffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  color: #c9b037 !important;
+}
+
+/* Container e estilo do mapa */
+.map-container iframe {
+  border-radius: 8px;
+  width: 100%;
+  height: 200px; /* Altura do mapa */
+  border: 0;
+}
+
+/* Linha separadora antes do copyright */
+.footer-separator {
+  border-color: #333;
+  margin: 40px 0 20px 0;
+}
+
+/* Container da barra inferior com copyright e pagamentos */
+.footer-bottom-bar {
+  padding: 0;
+}

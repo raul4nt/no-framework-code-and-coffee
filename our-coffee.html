@@ -1,67 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Code and Coffee - Nosso Café</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Code and Coffee - Nosso Café</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900|Crete+Round:400,400i&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900|Crete+Round:400,400i&display=swap" rel="stylesheet" />
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Estilos customizados -->
-    <link rel="stylesheet" href="css/header/header.css" />
-    <link rel="stylesheet" href="css/footer/footer.css" />
-    <link rel="stylesheet" href="css/our-coffee/our-coffee.css" />
-  </head>
-
-  <body>
-    <!-- HEADER -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+  <link rel="stylesheet" href="css/header/header.css" />
+  <link rel="stylesheet" href="css/footer/footer.css" />
+  <link rel="stylesheet" href="css/our-coffee/our-coffee.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <button class="navbar-toggler d-lg-none" type="button" id="sidebarToggle" aria-label="Abrir menu lateral" title="Abrir menu lateral">
           <span class="bi bi-list text-black"></span>
         </button>
-
         <div class="d-flex align-items-center">
           <a href="/" class="me-3 logo-link" aria-label="Página inicial Code and Coffee" title="Página inicial Code and Coffee">
             <img src="assets/logo.png" alt="Code and Coffee Logo" style="height: 40px" />
           </a>
           <div class="d-none d-lg-flex align-items-center">
-            <a href="/store" class="nav-link text-black me-3">MENU</a>
+            <a href="/store.html" class="nav-link text-black me-3">MENU</a>
             <a href="/our-coffee.html" class="nav-link text-black me-3">NOSSO CAFÉ</a>
             <a href="/about-us.html" class="nav-link text-black me-3">SOBRE NÓS</a>
           </div>
         </div>
-
         <div class="d-flex align-items-center search-container">
           <button id="searchToggle" class="d-flex align-items-center me-3 btn-icon" aria-label="Alternar barra de pesquisa" title="Pesquisar">
             <i class="bi bi-search text-black"></i>
           </button>
-
           <div class="search-bar d-none" id="searchBar">
             <input type="text" class="form-control" placeholder="Buscar" aria-label="Campo de busca de produtos" id="searchInput" />
             <button class="btn btn-dark ms-2" id="searchBtn" aria-label="Buscar" title="Ok">Ok</button>
           </div>
-
           <div class="d-flex align-items-center" id="userSection"></div>
         </div>
       </div>
-    </nav>
-
-    <div class="sidebar" id="sidebar">
+  </nav>
+  <div class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <button class="close-sidebar-btn" id="closeSidebar" aria-label="Fechar menu lateral" title="Fechar menu">
           <i class="bi bi-x-lg text-black"></i>
         </button>
       </div>
       <ul class="sidebar-menu">
-        <li><a href="/store" class="sidebar-link">MENU</a></li>
+        <li><a href="/store.html" class="sidebar-link">MENU</a></li>
         <li><a href="/our-coffee.html" class="sidebar-link">NOSSO CAFÉ</a></li>
         <li><a href="/about-us.html" class="sidebar-link">SOBRE NÓS</a></li>
         <li class="logged-in-only"><a href="/my-orders" class="sidebar-link">MEUS PEDIDOS</a></li>
@@ -69,81 +58,144 @@
         <li class="logged-in-only"><a href="#" id="logoutLink" class="sidebar-link">SAIR</a></li>
         <li class="logged-out-only"><a href="/login" class="sidebar-link">ENTRAR</a></li>
       </ul>
-    </div>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-    <!-- SEÇÃO NOSSO CAFÉ -->
-    <section class="our-coffee-container">
-      <h1 class="coffee-title">A arte por trás do processo</h1>
-
-      <div class="coffee-text">
-        <p>
-          Cada xícara servida na Code&Coffee começa muito antes da torra — nasce nas
-          montanhas, em plantações cuidadosamente cultivadas por famílias apaixonadas
-          pela arte do café. Nossos grãos são colhidos manualmente no ponto ideal de maturação,
-          garantindo um sabor equilibrado, aroma envolvente e uma experiência sensorial única.
-        </p>
-
-        <p>
-          Selecionamos grãos especiais de origens como Sul de Minas e Colômbia, com
-          foco em práticas sustentáveis e comércio justo. Nosso processo inclui torra
-          artesanal, moagem fresca e preparo preciso, respeitando o potencial de cada safra.
-        </p>
-
-        <p>
-          Cada detalhe é pensado para proporcionar um momento especial — desde a escolha da água até a temperatura ideal
-          para a extração. Trabalhamos com métodos variados como prensa francesa, V60 e espresso, permitindo que cada cliente
-          encontre o seu perfil ideal de sabor.
-        </p>
-
-        <p>
-          Nosso compromisso vai além da xícara: apoiamos projetos sociais nas regiões produtoras, promovendo
-          educação, capacitação e qualidade de vida para as comunidades envolvidas na cadeia do café.
-        </p>
-
-        <p class="coffee-highlight">
-          <em>Do campo à sua xícara, cada etapa é feita com cuidado e propósito.</em>
-        </p>
-      </div>
-
-      <div class="coffee-gallery">
-        <img src="assets/images/our-coffee/our-coffee-1.jpg" alt="Plantação de café" />
-        <img src="assets/images/our-coffee/our-coffee-2.jpg" alt="Grãos especiais" />
-        <img src="assets/images/our-coffee/our-coffee-3.jpg" alt="Torrefação artesanal" />
-        <img src="assets/images/our-coffee/our-coffee-4.jpg" alt="Café servido na xícara" />
-      </div>
+  <main class="our-coffee-page-container">
+    <section class="coffee-hero">
+      <h1>A Arte por Trás de Cada Grão</h1>
+      <p>Do campo à xícara, uma jornada de paixão, precisão e sabor.</p>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container">
-        <div class="links-row mb-4">
-          <a href="/store">Menu</a>
-          <a href="/our-coffee.html">Nosso Café</a>
-          <a href="/about-us.html">Sobre Nós</a>
-          <a href="https://docs.github.com/en/site-policy/github-terms/github-terms-of-service" target="_blank" rel="noopener noreferrer">
-            Termos de Uso
-          </a>
-        </div>
-        <div class="row align-items-center">
-          <div class="col-12 d-flex justify-content-between align-items-center ps-0">
-            <p>&copy; 2025 Code & Coffee – CNPJ 29.823.873/0001-57. Todos os direitos reservados.</p>
-            <div class="card-badges">
-              <img src="assets/images/footer/visa.png" alt="Visa" class="card-flag" />
-              <img src="assets/images/footer/mastercard.webp" alt="Mastercard" class="card-flag" />
-              <img src="assets/images/footer/elo.png" alt="Elo" class="card-flag" />
-              <img src="assets/images/footer/hipercard.svg" alt="Hipercard" class="card-flag" />
-              <img src="assets/images/footer/banrisul.jpg" alt="Banrisul" class="card-flag" />
+    <section class="timeline-section">
+        <h2 class="section-title">Nossa Jornada do Café</h2>
+        <p class="section-subtitle">
+          Cada xícara que você aprecia na Code & Coffee é o resultado de um processo meticuloso. Siga os passos que transformam um simples fruto em uma experiência inesquecível.
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-item timeline-left">
+            <div class="timeline-icon"><i class="bi bi-pin-map-fill"></i></div>
+            <div class="timeline-content">
+              <h3>1. A Origem</h3>
+              <p>Tudo começa nas altas montanhas do Sul de Minas, em fazendas parceiras que praticam a agricultura sustentável. Nosso "terroir digital" é a combinação única de altitude, clima e solo, que dá aos nossos grãos notas exclusivas de chocolate e frutas cítricas.</p>
+            </div>
+          </div>
+          <div class="timeline-item timeline-right">
+            <div class="timeline-icon"><i class="bi bi-flower1"></i></div>
+            <div class="timeline-content">
+              <h3>2. Colheita Seletiva</h3>
+              <p>Nossos agricultores realizam a colheita manual, um método conhecido como "cherry picking", selecionando apenas os frutos mais maduros. Esse cuidado garante um café com doçura natural e sem amargor, a base perfeita para a nossa arte.</p>
+            </div>
+          </div>
+          <div class="timeline-item timeline-left">
+            <div class="timeline-icon"><i class="bi bi-gear-fill"></i></div>
+            <div class="timeline-content">
+              <h3>3. Processamento Natural</h3>
+              <p>Após a colheita, os grãos secam ao sol em terreiros suspensos. Este método natural, ou "dry process", concentra os açúcares do fruto no grão, resultando em uma bebida mais encorpada e com aromas complexos, que lembram frutas vermelhas.</p>
+            </div>
+          </div>
+          <div class="timeline-item timeline-right">
+            <div class="timeline-icon"><i class="bi bi-graph-up-arrow"></i></div>
+            <div class="timeline-content">
+              <h3>4. Torra com Precisão</h3>
+              <p>Aqui, a mágica do "Code" acontece. Nossos mestres de torra desenvolvem perfis digitais para cada lote, controlando tempo e temperatura com precisão algorítmica. Cada grão se torna um pixel de sabor, revelando seu máximo potencial.</p>
+            </div>
+          </div>
+          <div class="timeline-item timeline-left">
+            <div class="timeline-icon"><i class="bi bi-cup-hot-fill"></i></div>
+            <div class="timeline-content">
+              <h3>5. A Xícara Perfeita</h3>
+              <p>Na nossa cafeteria, baristas apaixonados finalizam a jornada. Seja em um espresso perfeitamente calibrado ou em um V60 delicado, aplicamos a técnica final para entregar a você não apenas um café, mas toda a história por trás dele.</p>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+    </section>
 
-    <!-- SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/header.js"></script>
-  </body>
+    <section class="gallery-section">
+        <h2 class="section-title">Nossa Paixão em Imagens</h2>
+        <p class="section-subtitle">
+          As palavras contam a história, mas as imagens revelam a alma do nosso trabalho. Veja de perto os momentos que compõem a nossa jornada.
+        </p>
+        <div class="coffee-gallery">
+          <img src="assets/images/our-coffee/our-coffee-1.jpg" alt="Plantação de café" />
+          <img src="assets/images/our-coffee/our-coffee-2.jpg" alt="Grãos especiais" />
+          <img src="assets/images/our-coffee/our-coffee-3.jpg" alt="Torrefação artesanal" />
+          <img src="assets/images/our-coffee/our-coffee-4.jpg" alt="Café servido na xícara" />
+        </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="row footer-main-content">
+  
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <img src="assets/logo.png" alt="Code and Coffee Logo" class="footer-brand-logo">
+          <p class="footer-brand-text">Onde cada linha de código encontra a xícara de café perfeita. Criamos experiências e sabores para inspirar sua criatividade.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="GitHub" title="GitHub"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+  
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5 class="footer-heading">Links</h5>
+          <ul class="footer-links-list">
+            <li><a href="/store.html">Menu</a></li>
+            <li><a href="/our-coffee.html">Nosso Café</a></li>
+            <li><a href="/about-us.html">Sobre Nós</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="https://docs.github.com/en/site-policy/github-terms/github-terms-of-service" target="_blank" rel="noopener noreferrer">Termos de Uso</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <h5 class="footer-heading">Contato</h5>
+          <div class="footer-contact-info">
+            <p><i class="bi bi-geo-alt-fill"></i>Rua dos Devs, 101<br>Bairro Moinhos de Vento<br>Porto Alegre - RS, 90570-080</p>
+            <p><i class="bi bi-telephone-fill"></i>(51) 3030-5050</p>
+            <p><i class="bi bi-envelope-fill"></i>contato@codeandcoffee.com</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <h5 class="footer-heading">Onde Ficamos</h5>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.298715834898!2d-51.20018598488487!3d-30.02826318188849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197799faf34913%3A0x82559599b5da03b0!2sParque%20Moinhos%20de%20Vento%20(Parc%C3%A3o)!5e0!3m2!1spt-BR!2sbr!4v1684364897231!5m2!1spt-BR!2sbr" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+        
+      </div>
+  
+      <hr class="footer-separator">
+  
+      <div class="row footer-bottom-bar align-items-center">
+        <div class="col-lg-7 text-center text-lg-start mb-3 mb-lg-0">
+          <p>&copy; 2025 Code & Coffee – CNPJ 29.823.873/0001-57. Todos os direitos reservados.</p>
+        </div>
+        <div class="col-lg-5 text-center text-lg-end">
+          <div class="card-badges">
+            <img src="assets/images/footer/visa.png" alt="Visa" class="card-flag" />
+            <img src="assets/images/footer/mastercard.webp" alt="Mastercard" class="card-flag" />
+            <img src="assets/images/footer/elo.png" alt="Elo" class="card-flag" />
+            <img src="assets/images/footer/hipercard.svg" alt="Hipercard" class="card-flag" />
+            <img src="assets/images/footer/banrisul.jpg" alt="Banrisul" class="card-flag" />
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/header.js"></script>
+</body>
 </html>

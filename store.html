@@ -43,7 +43,7 @@
           <img src="assets/logo.png" alt="Code and Coffee Logo" style="height: 40px" />
         </a>
         <div class="d-none d-lg-flex align-items-center">
-          <a href="/store" class="nav-link text-black me-3">MENU</a>
+          <a href="/store.html" class="nav-link text-black me-3">MENU</a>
           <a href="/our-coffee.html" class="nav-link text-black me-3">NOSSO CAFÉ</a>
           <a href="/about-us.html" class="nav-link text-black me-3">SOBRE NÓS</a>
         </div>
@@ -91,7 +91,7 @@
       </button>
     </div>
     <ul class="sidebar-menu">
-      <li><a href="/store" class="sidebar-link">MENU</a></li>
+      <li><a href="/store.html" class="sidebar-link">MENU</a></li>
       <li><a href="/our-coffee.html" class="sidebar-link">NOSSO CAFÉ</a></li>
       <li><a href="/about-us.html" class="sidebar-link">SOBRE NÓS</a></li>
       <li class="logged-in-only"><a href="/my-orders" class="sidebar-link">MEUS PEDIDOS</a></li>
@@ -233,24 +233,61 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="links-row mb-4">
-        <a href="/store">Menu</a>
-        <a href="/our-coffee.html">Nosso Café</a>
-        <a href="/about-us.html">Sobre Nós</a>
-        <a
-          href="https://docs.github.com/en/site-policy/github-terms/github-terms-of-service"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Termos de Uso
-        </a>
+      <div class="row footer-main-content">
+  
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <img src="assets/logo.png" alt="Code and Coffee Logo" class="footer-brand-logo">
+          <p class="footer-brand-text">Onde cada linha de código encontra a xícara de café perfeita. Criamos experiências e sabores para inspirar sua criatividade.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="GitHub" title="GitHub"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+  
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5 class="footer-heading">Links</h5>
+          <ul class="footer-links-list">
+            <li><a href="/store.html">Menu</a></li>
+            <li><a href="/our-coffee.html">Nosso Café</a></li>
+            <li><a href="/about-us.html">Sobre Nós</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="https://docs.github.com/en/site-policy/github-terms/github-terms-of-service" target="_blank" rel="noopener noreferrer">Termos de Uso</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <h5 class="footer-heading">Contato</h5>
+          <div class="footer-contact-info">
+            <p><i class="bi bi-geo-alt-fill"></i>Rua dos Devs, 101<br>Bairro Moinhos de Vento<br>Porto Alegre - RS, 90570-080</p>
+            <p><i class="bi bi-telephone-fill"></i>(51) 3030-5050</p>
+            <p><i class="bi bi-envelope-fill"></i>contato@codeandcoffee.com</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <h5 class="footer-heading">Onde Ficamos</h5>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.298715834898!2d-51.20018598488487!3d-30.02826318188849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197799faf34913%3A0x82559599b5da03b0!2sParque%20Moinhos%20de%20Vento%20(Parc%C3%A3o)!5e0!3m2!1spt-BR!2sbr!4v1684364897231!5m2!1spt-BR!2sbr" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+        
       </div>
-      <div class="row align-items-center">
-        <div class="col-12 d-flex justify-content-between align-items-center ps-0">
+  
+      <hr class="footer-separator">
+  
+      <div class="row footer-bottom-bar align-items-center">
+        <div class="col-lg-7 text-center text-lg-start mb-3 mb-lg-0">
           <p>&copy; 2025 Code & Coffee – CNPJ 29.823.873/0001-57. Todos os direitos reservados.</p>
+        </div>
+        <div class="col-lg-5 text-center text-lg-end">
           <div class="card-badges">
             <img src="assets/images/footer/visa.png" alt="Visa" class="card-flag" />
             <img src="assets/images/footer/mastercard.webp" alt="Mastercard" class="card-flag" />
@@ -260,6 +297,7 @@
           </div>
         </div>
       </div>
+  
     </div>
   </footer>
 

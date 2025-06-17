@@ -33,7 +33,7 @@
             <img src="assets/logo.png" alt="Code and Coffee Logo" style="height: 40px" />
           </a>
           <div class="d-none d-lg-flex align-items-center">
-            <a href="/store" class="nav-link text-black me-3">MENU</a>
+            <a href="/store.html" class="nav-link text-black me-3">MENU</a>
             <a href="/our-coffee.html" class="nav-link text-black me-3">NOSSO CAFÉ</a>
             <a href="/about-us.html" class="nav-link text-black me-3">SOBRE NÓS</a>
           </div>
@@ -61,7 +61,7 @@
         </button>
       </div>
       <ul class="sidebar-menu">
-        <li><a href="/store" class="sidebar-link">MENU</a></li>
+        <li><a href="/store.html" class="sidebar-link">MENU</a></li>
         <li><a href="/our-coffee.html" class="sidebar-link">NOSSO CAFÉ</a></li>
         <li><a href="/about-us.html" class="sidebar-link">SOBRE NÓS</a></li>
         <li class="logged-in-only"><a href="/my-orders" class="sidebar-link">MEUS PEDIDOS</a></li>
@@ -73,49 +73,200 @@
 
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    <!-- SEÇÃO SOBRE NÓS -->
-    <section class="about-us-container">
-      <h1 class="about-title">Nossa história</h1>
+    <main>
+      <section class="about-hero">
+        <div class="container">
+          <h1>Mais que uma cafeteria, uma história de paixão.</h1>
+          <p>Conheça a jornada que nos trouxe até aqui e o que nos move todos os dias.</p>
+        </div>
+      </section>
+    
+      <section class="story-section">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <img src="assets/images/about-us/our-history.webp" alt="Fundador Lars Andersen" class="about-image img-fluid">
+            </div>
+            <div class="col-lg-6">
+              <h2 class="section-title text-start">Nossa História</h2>
+              <div class="about-text text-start p-0 m-0 mw-100">
+                <p>
+                  Tudo começou em 1978, quando Lars Andersen, um jovem sonhador vindo da Noruega, desembarcou em Porto Alegre com pouco mais do que uma mala, uma máquina de café manual e um caderninho repleto de receitas de sua avó. Em sua terra natal, o café era um ritual silencioso das manhãs geladas — e Lars acreditava que esse momento de pausa e aconchego podia aquecer corações também do outro lado do oceano.
+                </p>
+                <p>
+                  Com muito trabalho, montou um pequeno café numa esquina escondida da cidade. Ele moía os grãos à mão e tratava cada xícara como uma história. Hoje, a Code&Coffee é um ponto de encontro que une essa tradição à inovação, mantendo vivo o sonho de Lars.
+                </p>
+                <p class="about-highlight text-start m-0">
+                  <em>Mais do que café, servimos lembranças, encontros e calor humano.</em>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="values-section">
+        <div class="container">
+          <h2 class="section-title">Nossos Pilares</h2>
+          <p class="section-subtitle">Três valores que guiam cada decisão, cada grão torrado e cada xícara servida.</p>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="value-card">
+                <div class="value-icon"><i class="bi bi-heart-fill"></i></div>
+                <h3>Paixão pela Tradição</h3>
+                <p>Honramos a história de Lars e a arte artesanal do café, valorizando o processo manual e as receitas que atravessam gerações.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="value-card">
+                <div class="value-icon"><i class="bi bi-cpu-fill"></i></div>
+                <h3>Precisão na Inovação</h3>
+                <p>Abraçamos a tecnologia para aprimorar nossos processos, da torra com perfis digitais à experiência do cliente, unindo o melhor de dois mundos.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="value-card">
+                <div class="value-icon"><i class="bi bi-people-fill"></i></div>
+                <h3>Comunidade e Conexão</h3>
+                <p>Acreditamos que o café conecta pessoas. Somos um espaço para encontros, conversas e novas ideias, apoiando sempre a comunidade local.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="contact-section">
+        <div class="container">
+          <h2 class="section-title">Fale Conosco</h2>
+          <p class="section-subtitle">Sua opinião é o ingrediente secreto da nossa evolução. Envie sua sugestão, dúvida ou elogio. Adoraremos ouvir você!</p>
+          <div class="row">
+            <div class="col-lg-7 mb-4 mb-lg-0">
+              <div class="contact-form-container">
+                <form>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="fullName" class="form-label">Nome Completo</label>
+                      <input type="text" class="form-control" id="fullName" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="email" class="form-label">E-mail</label>
+                      <input type="email" class="form-control" id="email" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="phone" class="form-label">Telefone</label>
+                      <input type="tel" class="form-control" id="phone">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="subject" class="form-label">Assunto</label>
+                      <select class="form-select" id="subject">
+                        <option selected>Sugestão</option>
+                        <option>Elogio</option>
+                        <option>Reclamação</option>
+                        <option>Imprensa</option>
+                        <option>Outros</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Melhor horário para contato</label>
+                    <div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="contactTime" id="timeMorning" value="morning">
+                        <label class="form-check-label" for="timeMorning">Manhã</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="contactTime" id="timeAfternoon" value="afternoon">
+                        <label class="form-check-label" for="timeAfternoon">Tarde</notext>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Sua Mensagem</label>
+                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="newsletterCheck">
+                    <label class="form-check-label" for="newsletterCheck">
+                      Aceito receber novidades e promoções por e-mail.
+                    </label>
+                  </div>
+                  <button type="submit" class="btn btn-dark w-100">Enviar Mensagem</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="contact-info-box">
+                    <h3>Nossos Contatos</h3>
+                    <p>Estamos sempre disponíveis para uma boa conversa, acompanhada de um excelente café.</p>
+                    <hr>
+                    <p><i class="bi bi-geo-alt icon"></i> <strong>Endereço:</strong><br>Rua dos Devs, 101<br>Moinhos de Vento, Porto Alegre</p>
+                    <p><i class="bi bi-telephone icon"></i> <strong>Telefone:</strong><br>(51) 3030-5050</p>
+                    <p><i class="bi bi-envelope icon"></i> <strong>E-mail:</strong><br>contato@codeandcoffee.com</p>
+                    <p><i class="bi bi-clock icon"></i> <strong>Horários:</strong><br>Seg - Sáb: 8h às 20h</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-      <img
-        src="assets/images/about-us/our-history.webp"
-        alt="Nossa história"
-        class="about-image"
-      />
-
-      <div class="about-text">
-        <p>
-          Tudo começou em 1978, quando Lars Andersen, um jovem sonhador vindo da Noruega, desembarcou no Brasil com pouco mais do que uma mala, uma máquina de café manual e um caderninho repleto de receitas de sua avó. Em sua terra natal, o café era um ritual silencioso das manhãs geladas — e Lars acreditava que esse momento de pausa e aconchego podia aquecer corações também do outro lado do oceano.
-        </p>
-
-        <p>
-          Com muito trabalho e uma paixão inabalável, Lars montou um pequeno café numa esquina escondida da cidade de Porto Alegre, no Rio Grande do Sul. Ele moía os grãos à mão, fazia questão de conversar com cada cliente e tratava cada xícara como uma história. Décadas depois, sua essência continua viva em cada detalhe da nossa cafeteria — da escolha dos grãos especiais à atmosfera que acolhe quem chega.
-        </p>
-
-        <p>
-          Hoje, a Code&Coffee é um ponto de encontro que une tradição e inovação, onde cada cliente é parte da nossa família. Continuamos investindo em práticas sustentáveis e no apoio às comunidades produtoras, mantendo vivo o sonho de Lars.
-        </p>
-
-        <p class="about-highlight">
-          <em>Mais do que café, servimos lembranças, encontros e calor humano.</em>
-        </p>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
-        <div class="links-row mb-4">
-          <a href="/store">Menu</a>
-          <a href="/our-coffee.html">Nosso Café</a>
-          <a href="/about-us.html">Sobre Nós</a>
-          <a href="https://docs.github.com/en/site-policy/github-terms/github-terms-of-service" target="_blank" rel="noopener noreferrer">
-            Termos de Uso
-          </a>
+        <div class="row footer-main-content">
+    
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <img src="assets/logo.png" alt="Code and Coffee Logo" class="footer-brand-logo">
+            <p class="footer-brand-text">Onde cada linha de código encontra a xícara de café perfeita. Criamos experiências e sabores para inspirar sua criatividade.</p>
+            <div class="social-icons">
+              <a href="#" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="GitHub" title="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+    
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h5 class="footer-heading">Links</h5>
+            <ul class="footer-links-list">
+              <li><a href="/store.html">Menu</a></li>
+              <li><a href="/our-coffee.html">Nosso Café</a></li>
+              <li><a href="/about-us.html">Sobre Nós</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+              <li><a href="https://docs.github.com/en/site-policy/github-terms/github-terms-of-service" target="_blank" rel="noopener noreferrer">Termos de Uso</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h5 class="footer-heading">Contato</h5>
+            <div class="footer-contact-info">
+              <p><i class="bi bi-geo-alt-fill"></i>Rua dos Devs, 101<br>Bairro Moinhos de Vento<br>Porto Alegre - RS, 90570-080</p>
+              <p><i class="bi bi-telephone-fill"></i>(51) 3030-5050</p>
+              <p><i class="bi bi-envelope-fill"></i>contato@codeandcoffee.com</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <h5 class="footer-heading">Onde Ficamos</h5>
+            <div class="map-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.298715834898!2d-51.20018598488487!3d-30.02826318188849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197799faf34913%3A0x82559599b5da03b0!2sParque%20Moinhos%20de%20Vento%20(Parc%C3%A3o)!5e0!3m2!1spt-BR!2sbr!4v1684364897231!5m2!1spt-BR!2sbr" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+          
         </div>
-        <div class="row align-items-center">
-          <div class="col-12 d-flex justify-content-between align-items-center ps-0">
+    
+        <hr class="footer-separator">
+    
+        <div class="row footer-bottom-bar align-items-center">
+          <div class="col-lg-7 text-center text-lg-start mb-3 mb-lg-0">
             <p>&copy; 2025 Code & Coffee – CNPJ 29.823.873/0001-57. Todos os direitos reservados.</p>
+          </div>
+          <div class="col-lg-5 text-center text-lg-end">
             <div class="card-badges">
               <img src="assets/images/footer/visa.png" alt="Visa" class="card-flag" />
               <img src="assets/images/footer/mastercard.webp" alt="Mastercard" class="card-flag" />
@@ -125,6 +276,7 @@
             </div>
           </div>
         </div>
+    
       </div>
     </footer>
 
