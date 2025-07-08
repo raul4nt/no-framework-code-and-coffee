@@ -1,63 +1,50 @@
-/* ======================================================= */
-/* === CSS ATUALIZADO - Identidade Visual Restaurada ==== */
-/* ======================================================= */
-
-/* --- Estilos Gerais da Página (do seu CSS original) --- */
-.our-coffee-page-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 3rem 2rem;
-  font-family: 'Montserrat', sans-serif;
-  color: #392620;
+body {
+  background-color: #fff;
 }
 
-/* --- Seção Hero Ajustada --- */
-.coffee-hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: #fff; /* Fundo branco para simplicidade */
-}
-
-.coffee-hero h1 {
-  /* Mantive a Crete Round aqui para um título de impacto, como no seu logo */
-  font-family: 'Crete Round', serif;
-  font-size: 3.5rem;
-  color: #392620;
-  margin-bottom: 0.5rem;
-}
-
-.coffee-hero p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.25rem;
-  color: #5a4b45; /* Um tom de marrom mais suave */
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* --- Títulos de Seção Ajustados --- */
 .section-title {
   text-align: center;
   font-family: 'Crete Round', serif;
   font-size: 2.8rem;
   margin-bottom: 1rem;
-  color: #392620;
+  color: #212529;
 }
 
 .section-subtitle {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
-  color: #5a4b45;
+  color: #6c757d;
   max-width: 700px;
   margin: 0 auto 4rem auto;
   line-height: 1.7;
 }
 
-/* --- Linha do Tempo Ajustada --- */
+.coffee-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/our-coffee/our-coffee-1.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.coffee-hero h1 {
+  font-family: 'Crete Round', serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.coffee-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 1rem auto 0;
+  font-weight: 300;
+}
+
 .timeline-section {
-  padding: 4rem 0;
-  background-color: #fff; /* Fundo branco */
-  font-family: 'Montserrat', sans-serif;
+  padding: 5rem 0;
+  background-color: #fff;
 }
 
 .timeline {
@@ -70,7 +57,7 @@
   content: '';
   position: absolute;
   width: 3px;
-  background-color: #f0ebe9; /* Linha em tom de marrom bem claro */
+  background-color: #e9ecef;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -80,7 +67,6 @@
 .timeline-item {
   padding: 10px 40px;
   position: relative;
-  background-color: inherit;
   width: 50%;
 }
 
@@ -89,7 +75,7 @@
   width: 50px;
   height: 50px;
   right: -25px;
-  background-color: #392620; /* Cor principal */
+  background-color: #212529;
   color: #fff;
   top: 15px;
   border-radius: 50%;
@@ -110,28 +96,28 @@
   background-color: #fff;
   position: relative;
   border-radius: 8px;
-  border: 1px solid #f0ebe9; /* Borda sutil */
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .timeline-content h3 {
   font-family: 'Crete Round', serif;
-  color: #392620;
+  color: #212529;
   font-size: 1.5rem;
 }
 
-/* --- Galeria de Imagens (Layout original restaurado) --- */
 .gallery-section {
-  padding: 4rem 2rem;
-  background-color: #fff;
+  padding: 5rem 0;
+  background-color: #fafafa;
 }
 
 .coffee-gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 250px); /* Controle da altura das imagens */
+  grid-template-rows: repeat(3, 250px);
   gap: 1.5rem;
   margin-top: 2rem;
-  max-width: 1400px; /* Garante que não fique largo demais */
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -140,20 +126,19 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
-  filter: grayscale(100%);
-  transition: transform 0.3s ease, filter 0.3s ease 1s; /* A transição do filtro é mais lenta */
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+  filter: grayscale(80%);
+  transition: all 0.4s ease;
   cursor: pointer;
 }
 
 .coffee-gallery img:hover {
-  transform: scale(1.03);
+  transform: scale(1.03) translateY(-5px);
   filter: grayscale(0%);
-  transition-delay: 0s; /* Tira o delay no hover */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* Posicionamento exato das imagens, como no original */
 .coffee-gallery img:nth-child(1) {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
@@ -174,15 +159,12 @@
   grid-row: 3 / span 1;
 }
 
-
-/* --- Media Queries (Combinando os antigos e os novos) --- */
 @media (max-width: 991px) {
   .coffee-gallery {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(auto-fit, 200px);
   }
 
-  /* Reseta o posicionamento manual do grid em telas menores */
   .coffee-gallery img:nth-child(1),
   .coffee-gallery img:nth-child(2),
   .coffee-gallery img:nth-child(3),
@@ -193,8 +175,8 @@
 }
 
 @media (max-width: 767px) {
-  .our-coffee-page-container, .gallery-section, .coffee-hero {
-    padding: 2rem 1rem;
+  .gallery-section, .timeline-section, .coffee-hero {
+    padding: 3rem 1rem;
   }
 
   .coffee-hero h1, .section-title {
@@ -211,13 +193,6 @@
     padding-right: 25px;
   }
 
-  .timeline-item::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #fff transparent transparent;
-  }
-
   .timeline-left .timeline-icon, .timeline-right .timeline-icon {
     left: 6px;
   }
@@ -228,6 +203,6 @@
 
   .coffee-gallery {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fit, 180px);
+    grid-template-rows: repeat(auto-fit, 200px);
   }
 }

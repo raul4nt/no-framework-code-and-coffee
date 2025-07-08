@@ -1,130 +1,11 @@
 .footer {
   background-color: #000000;
-  padding: 30px 0;
+  padding: 50px 0 20px 0;
   color: #ffffff;
   border-top: 1px solid #333;
   width: 100%;
 }
 
-.footer a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1.25rem;
-  transition: color 0.3s ease;
-  display: inline-block;
-  padding: 0 10px;
-}
-
-.footer a:hover {
-  color: #c9b037 !important;
-  text-decoration: none;
-}
-
-.footer p {
-  margin-bottom: 0;
-  font-size: 1rem;
-}
-
-.footer .links-row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.footer .links-row a {
-  text-align: center;
-  white-space: nowrap;
-  flex-grow: 1;
-  padding: 5px 10px;
-  font-size: 1rem;
-}
-
-.ps-0 {
-  padding-left: 0 !important;
-}
-
-.card-badges {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 15px;
-  gap: 10px;
-}
-
-.card-flag {
-  width: 35px;
-  height: auto;
-  margin: 0 5px;
-  vertical-align: middle;
-}
-
-.footer .row.align-items-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.footer .col-12 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-}
-
-@media (min-width: 768px) {
-  .footer .links-row {
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    margin-bottom: 30px;
-  }
-
-  .footer .links-row a {
-    font-size: 1.25rem;
-    padding: 0 10px;
-  }
-
-  .footer .card-badges {
-    justify-content: space-between;
-    margin-top: 0;
-    gap: 0;
-  }
-
-  .card-flag {
-    width: 40px;
-    margin: 0 10px;
-  }
-
-  .footer .row.align-items-center {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .footer .col-12 {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-/* ============================================== */
-/* === NOVOS ESTILOS PARA O RODAPÉ ROBUSTO ====== */
-/* ============================================== */
-
-.footer {
-  /* Aumentando o padding para acomodar mais conteúdo */
-  padding: 50px 0 20px 0;
-}
-
-/* Títulos das colunas do rodapé */
 .footer-heading {
   font-family: 'Crete Round', serif;
   font-size: 1.5rem;
@@ -134,7 +15,6 @@
   padding-bottom: 10px;
 }
 
-/* Linha decorativa abaixo dos títulos */
 .footer-heading::after {
   content: '';
   position: absolute;
@@ -142,10 +22,9 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background-color: #c9b037; /* Cor de destaque do hover */
+  background-color: #c9b037;
 }
 
-/* Estilos para a coluna da marca */
 .footer-brand-logo {
   height: 50px;
   margin-bottom: 15px;
@@ -157,7 +36,6 @@
   line-height: 1.6;
 }
 
-/* Lista de links úteis */
 .footer-links-list {
   list-style: none;
   padding: 0;
@@ -171,25 +49,29 @@
 .footer-links-list a {
   font-size: 1rem;
   color: #ccc;
-  padding: 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-/* Informações de contato */
+.footer-links-list a:hover {
+  color: #c9b037 !important;
+}
+
 .footer-contact-info p {
   font-size: 0.95rem;
   color: #ccc;
   margin-bottom: 12px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .footer-contact-info i {
   color: #c9b037;
-  margin-right: 10px;
+  margin-right: 12px;
   font-size: 1.1rem;
+  margin-top: 4px;
 }
 
-/* Ícones de redes sociais */
 .social-icons {
   margin-top: 20px;
 }
@@ -198,7 +80,12 @@
   font-size: 1.5rem;
   margin-right: 15px;
   color: #ffffff;
+  text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
 }
 
 .social-icons a:hover {
@@ -206,21 +93,72 @@
   color: #c9b037 !important;
 }
 
-/* Container e estilo do mapa */
 .map-container iframe {
   border-radius: 8px;
   width: 100%;
-  height: 200px; /* Altura do mapa */
+  height: 200px;
   border: 0;
 }
 
-/* Linha separadora antes do copyright */
 .footer-separator {
   border-color: #333;
   margin: 40px 0 20px 0;
 }
 
-/* Container da barra inferior com copyright e pagamentos */
 .footer-bottom-bar {
   padding: 0;
+}
+
+.footer-bottom-bar p {
+  margin: 0;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card-flag {
+  height: 25px;
+  width: auto;
+}
+
+@media (max-width: 991.98px) {
+  .footer-main-content > div {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .footer-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-icons {
+    justify-content: center;
+    display: flex;
+  }
+
+  .footer-contact-info p {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-bottom-bar .text-lg-start,
+  .footer-bottom-bar .text-lg-end {
+    text-align: center !important;
+  }
+
+  .card-badges {
+    justify-content: center;
+  }
 }

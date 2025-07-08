@@ -1,7 +1,6 @@
-/* --- ESTILOS GERAIS DO CARROSSEL --- */
 .carousel-section {
     max-width: 1200px;
-    margin: 40px auto; /* Mais espaço vertical na página */
+    margin: 40px auto;
     padding: 0 15px;
 }
 
@@ -12,6 +11,7 @@
     color: #333;
     text-align: center;
     margin-bottom: 30px;
+    transition: font-size 0.3s ease;
 }
 
 .carousel {
@@ -24,24 +24,24 @@
 
 .carousel-track {
     display: flex;
-    padding: 15px 5px; /* Padding para a sombra do card */
+    padding: 15px 5px;
     margin: 0;
     list-style: none;
-    gap: 18px; /* Espaçamento ajustado */
+    gap: 18px;
+    transition: gap 0.3s ease;
 }
 
-/* --- ESTILOS DOS CARDS (SLIDES) --- */
 .carousel-slide {
-    min-width: 200px; /* Cards mais estreitos */
+    min-width: 200px;
     flex-shrink: 0;
     box-sizing: border-box;
     background: #ffffff;
-    border-radius: 12px; /* Bordas mais suaves */
+    border-radius: 12px;
     text-align: center;
     padding: 15px;
     border: 1px solid #f0f0f0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .carousel-slide:hover {
@@ -49,16 +49,15 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* === AJUSTE PRINCIPAL PARA FOTOS MENORES === */
 .carousel-slide img {
     width: 100%;
-    height: 125px; /* Altura bem menor para o espaço da imagem */
-    object-fit: contain; /* ESSENCIAL: Mostra a imagem inteira, sem cortar, fazendo-a parecer menor */
+    height: 125px;
+    object-fit: contain;
     margin-bottom: 15px;
     border-radius: 8px;
+    transition: height 0.3s ease;
 }
 
-/* --- TIPOGRAFIA REFINADA --- */
 .carousel-slide h5 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -71,7 +70,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
     margin-bottom: 12px;
-    color: #6c757d; /* Cinza do Bootstrap para consistência */
+    color: #6c757d;
     min-height: 38px;
 }
 
@@ -79,13 +78,12 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 700;
-    color: #212529; /* Preto suave do Bootstrap */
+    color: #212529;
 }
 
-/* --- BOTÕES DE NAVEGAÇÃO --- */
 .carousel-button {
     position: absolute;
-    top: 40%; /* Posição um pouco mais para cima */
+    top: 40%;
     transform: translateY(-50%);
     background: #fff;
     border: 1px solid #e0e0e0;
@@ -116,34 +114,69 @@
     right: -5px;
 }
 
-/* --- RESPONSIVIDADE --- */
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
     .carousel-slide {
-        min-width: 190px;
+        min-width: 185px;
+    }
+    .carousel-button {
+        top: 38%;
+    }
+    .carousel-button-left {
+        left: 5px;
+    }
+    .carousel-button-right {
+        right: 5px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
+    .carousel-section {
+        padding: 0;
+    }
+    .carousel-track-container {
+        padding: 0 15px;
+    }
     .carousel-slide {
-        min-width: 170px;
+        min-width: calc(50% - 9px);
     }
     .carousel-slide img {
-        height: 110px;
+        height: 115px;
     }
     .carousel-button {
-        /* Oculta os botões em telas menores para não poluir */
+        width: 38px;
+        height: 38px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .carousel-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    .carousel-track {
+        padding: 10px 0;
+        gap: 12px;
+    }
+    .carousel-slide {
+        min-width: calc(50% - 6px);
+    }
+    .carousel-button {
         display: none;
     }
 }
 
 @media (max-width: 480px) {
+    .carousel-track-container {
+        padding: 0 10px;
+    }
     .carousel-track {
-        gap: 12px;
+        gap: 10px;
     }
     .carousel-slide {
-        min-width: 150px;
+        min-width: 100%;
     }
     .carousel-slide img {
-        height: 100px;
+        height: 150px;
     }
 }
