@@ -93,6 +93,12 @@
     margin-bottom: 2.5rem;
     padding: 1rem;
   }
+  
+  .product-image-container img {
+    max-height: 280px;
+  }
+
+
   .product-info h1 {
     font-size: 1.5rem;
   }
