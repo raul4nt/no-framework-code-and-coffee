@@ -8,11 +8,14 @@
   border-radius: 12px;
   padding: 1.5rem;
   border: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-image-container img {
   width: 100%;
-  max-height: 500px;
+  max-height: 350px;
   object-fit: contain;
   border-radius: 6px;
 }
@@ -22,12 +25,12 @@
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: #212529;
-  font-size: 1.9rem;
+  font-size: 1.7rem;
 }
 
 .product-info .price {
-  font-size: 1.6rem;
-  font-weight: 900;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: #212529;
   margin-bottom: 1.5rem;
 }
@@ -35,28 +38,28 @@
 .product-info .section-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 1.1rem;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
   border-left: 3px solid #212529;
-  padding-left: 15px;
+  padding-left: 10px;
   color: #212529;
 }
 
 .product-info p {
-  line-height: 1.7;
-  font-size: 1rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
   color: #495057;
 }
 
 .product-info p small {
   color: #6c757d;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 .actions-container .btn {
   padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
@@ -74,10 +77,10 @@
 
 @media (max-width: 991.98px) {
   .product-info h1 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
   .product-info .price {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -88,12 +91,13 @@
   }
   .product-image-container {
     margin-bottom: 2.5rem;
+    padding: 1rem;
   }
   .product-info h1 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   .product-info .price {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .product-info .section-title {
     display: inline-flex;
