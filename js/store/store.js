@@ -8,12 +8,12 @@ $(function() {
 
   function createProductCard(productId, product) {
     const shortDescription = product.description.length > 80 ?
-                             product.description.substring(0, 80) + '...' :
-                             product.description;
+                              product.description.substring(0, 80) + '...' :
+                              product.description;
 
-    // A MUDANÇA ESTÁ AQUI: no atributo href do link
+    // A MUDANÇA ESTÁ AQUI: no atributo data-* e na variável usada
     return `
-      <div class="col product-item" data-category="${product.category}" style="display: none;">
+      <div class="col product-item" data-type="${product.type}" style="display: none;">
         <div class="card product-card h-100">
           <div class="card-img-container">
             <img src="${product.image}" class="card-img-top" alt="${product.name}" />
@@ -44,8 +44,10 @@ $(function() {
     $('.filter-btn').removeClass('active');
     $(this).addClass('active');
     const filter = $(this).data('filter');
+
     $('.product-item').each(function() {
-      if (filter === 'all' || $(this).data('category') === filter) {
+      // A MUDANÇA ESTÁ AQUI: lendo o data-type em vez de data-category
+      if (filter === 'all' || $(this).data('type') === filter) {
         $(this).fadeIn(300);
       } else {
         $(this).fadeOut(300);
