@@ -7,10 +7,7 @@ main {
 }
 
 .about-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('../assets/images/about-us/our-history.webp');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-color: #000;
   padding: 6rem 2rem;
   text-align: center;
   color: #fff;
@@ -51,6 +48,12 @@ main {
   padding: 5rem 0;
   background-color: #fff;
 }
+
+/* --- ADICIONADO: Centraliza o título "Nossa História" --- */
+.story-section .section-title {
+  text-align: center !important; /* O !important garante que esta regra sobrescreva outras */
+}
+/* ---------------------------------------------------- */
 
 .story-section .about-image {
   border-radius: 8px;
@@ -165,31 +168,3 @@ main {
 
 .contact-info-box h3 {
   font-family: 'Crete Round', serif;
-  color: #fff;
-}
-
-.contact-info-box p {
-  color: #e9ecef;
-  margin-bottom: 1.25rem;
-}
-
-.contact-info-box .icon {
-  color: #fff;
-  margin-right: 12px;
-  font-size: 1.2rem;
-}
-
-@media (max-width: 767px) {
-  .about-hero h1 {
-    font-size: 2.8rem;
-  }
-  .section-title {
-    font-size: 2.2rem;
-  }
-  .story-section, .values-section, .contact-section {
-    padding: 3rem 0;
-  }
-  .value-card {
-    margin-bottom: 2rem;
-  }
-}
