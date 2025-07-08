@@ -1,115 +1,149 @@
+/* --- ESTILOS GERAIS DO CARROSSEL --- */
 .carousel-section {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+    max-width: 1200px;
+    margin: 40px auto; /* Mais espaço vertical na página */
+    padding: 0 15px;
+}
+
+.carousel-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .carousel {
-  position: relative;
-  overflow: hidden;
+    position: relative;
 }
 
 .carousel-track-container {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+    display: flex;
+    padding: 15px 5px; /* Padding para a sombra do card */
+    margin: 0;
+    list-style: none;
+    gap: 18px; /* Espaçamento ajustado */
 }
 
+/* --- ESTILOS DOS CARDS (SLIDES) --- */
 .carousel-slide {
-  min-width: 280px;       /* Largura mínima consistente para cada slide */
-  margin-right: 20px;
-  box-sizing: border-box;
-  background: #fff;
-  border-radius: 6px;
-  padding: 15px;
-  text-align: center;
-  flex-shrink: 0;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    min-width: 200px; /* Cards mais estreitos */
+    flex-shrink: 0;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 12px; /* Bordas mais suaves */
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.carousel-slide:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* === AJUSTE PRINCIPAL PARA FOTOS MENORES === */
 .carousel-slide img {
-  width: 100%;
-  height: 180px;          /* Altura fixa para manter uniformidade */
-  object-fit: contain;    /* Mantém a proporção sem cortar a imagem */
-  border-radius: 6px;
-  margin-bottom: 10px;
+    width: 100%;
+    height: 125px; /* Altura bem menor para o espaço da imagem */
+    object-fit: contain; /* ESSENCIAL: Mostra a imagem inteira, sem cortar, fazendo-a parecer menor */
+    margin-bottom: 15px;
+    border-radius: 8px;
 }
 
+/* --- TIPOGRAFIA REFINADA --- */
 .carousel-slide h5 {
-  margin-bottom: 5px;
-  font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: #333;
 }
 
 .carousel-slide p {
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-  color: #444;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+    color: #6c757d; /* Cinza do Bootstrap para consistência */
+    min-height: 38px;
 }
 
 .carousel-slide strong {
-  font-size: 1rem;
-  color: #c9b037;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #212529; /* Preto suave do Bootstrap */
 }
 
+/* --- BOTÕES DE NAVEGAÇÃO --- */
 .carousel-button {
-  position: absolute;
-  top: 50%;
-  background: rgba(0,0,0,0.3);
-  border: none;
-  color: #fff;
-  font-size: 2rem;
-  padding: 0 12px;
-  cursor: pointer;
-  transform: translateY(-50%);
-  z-index: 10;
-  border-radius: 3px;
-  transition: background 0.3s ease;
+    position: absolute;
+    top: 40%; /* Posição um pouco mais para cima */
+    transform: translateY(-50%);
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    color: #333;
+    font-size: 1.4rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
 }
 
 .carousel-button:hover {
-  background: rgba(0,0,0,0.7);
+    background-color: #f8f8f8;
+    transform: translateY(-50%) scale(1.05);
 }
 
 .carousel-button-left {
-  left: 10px;
+    left: -5px;
 }
 
 .carousel-button-right {
-  right: 10px;
+    right: -5px;
 }
 
-/* Responsividade */
-
-@media (max-width: 991.98px) {
-  .carousel-slide {
-    min-width: 220px;   /* reduz a largura para tablets */
-  }
-  .carousel-slide img {
-    height: 140px;      /* reduz altura da imagem */
-  }
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 992px) {
+    .carousel-slide {
+        min-width: 190px;
+    }
 }
 
-@media (max-width: 767px) {
-  .carousel-slide {
-    min-width: 180px;   /* reduz a largura para telas pequenas */
-  }
-  .carousel-slide img {
-    height: 110px;      /* altura menor para telas pequenas */
-  }
+@media (max-width: 768px) {
+    .carousel-slide {
+        min-width: 170px;
+    }
+    .carousel-slide img {
+        height: 110px;
+    }
+    .carousel-button {
+        /* Oculta os botões em telas menores para não poluir */
+        display: none;
+    }
 }
 
-@media (max-width: 479px) {
-  .carousel-slide {
-    min-width: 140px;   /* para celulares muito pequenos */
-    margin-right: 10px;
-  }
-  .carousel-slide img {
-    height: 90px;
-  }
+@media (max-width: 480px) {
+    .carousel-track {
+        gap: 12px;
+    }
+    .carousel-slide {
+        min-width: 150px;
+    }
+    .carousel-slide img {
+        height: 100px;
+    }
 }
