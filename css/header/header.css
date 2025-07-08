@@ -211,3 +211,31 @@ body.sidebar-active {
     font-size: 0.9rem;
   }
 }
+
+
+.home-image-container {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.home-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+  .home-image-container {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .home-image-container {
+    height: 35vh;
+  }
+}
