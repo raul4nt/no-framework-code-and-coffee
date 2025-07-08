@@ -1,32 +1,57 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const productItems = document.querySelectorAll('.product-item');
-  
-    filterButtons.forEach(button => {
-      button.addEventListener('click', function () {
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        this.classList.add('active');
-  
-        const filter = this.getAttribute('data-filter');
-  
-        productItems.forEach(item => {
-          // Usamos uma animação sutil para a transição
-          item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-          if (filter === 'all' || item.getAttribute('data-category') === filter) {
-            item.style.opacity = '1';
-            item.style.transform = 'scale(1)';
-            // Timeout para garantir que o display mude após a animação de "fade out"
-            setTimeout(() => {
-              item.style.display = 'block';
-            }, 150);
-          } else {
-            item.style.opacity = '0';
-            item.style.transform = 'scale(0.9)';
-             setTimeout(() => {
-              item.style.display = 'none';
-            }, 300);
-          }
-        });
-      });
+$(function() {
+  const productGrid = $('#product-grid');
+
+  if (typeof products === 'undefined' || !productGrid.length) {
+    console.error("ERRO: A base de dados 'products.js' não foi carregada ou o container #product-grid não foi encontrado.");
+    return;
+  }
+
+  function createProductCard(productId, product) {
+    const shortDescription = product.description.length > 80 ?
+                             product.description.substring(0, 80) + '...' :
+                             product.description;
+
+    // A MUDANÇA ESTÁ AQUI: no atributo href do link
+    return `
+      <div class="col product-item" data-category="${product.category}" style="display: none;">
+        <div class="card product-card h-100">
+          <div class="card-img-container">
+            <img src="${product.image}" class="card-img-top" alt="${product.name}" />
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">${product.name}</h5>
+            <p class="card-text">${shortDescription}</p>
+            <div class="mt-auto">
+              <p class="price">${product.price}</p>
+              <a href="/product-details.html?product=${productId}" class="btn btn-details w-100">Ver detalhes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderProducts() {
+    let allProductsHtml = '';
+    for (const productId in products) {
+      allProductsHtml += createProductCard(productId, products[productId]);
+    }
+    productGrid.html(allProductsHtml);
+    $('.product-item').fadeIn(400);
+  }
+
+  $('.filter-btn').on('click', function() {
+    $('.filter-btn').removeClass('active');
+    $(this).addClass('active');
+    const filter = $(this).data('filter');
+    $('.product-item').each(function() {
+      if (filter === 'all' || $(this).data('category') === filter) {
+        $(this).fadeIn(300);
+      } else {
+        $(this).fadeOut(300);
+      }
     });
   });
+
+  renderProducts();
+});

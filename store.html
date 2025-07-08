@@ -6,9 +6,7 @@
   <title>Code and Coffee - Cardápio</title>
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900|Crete+Round:400,400i&display=swap" rel="stylesheet" />
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/header/header.css" />
@@ -40,7 +38,7 @@
           <button class="btn btn-dark ms-2" id="searchBtn" aria-label="Buscar" title="Ok">Ok</button>
         </div>
         <div class="d-flex align-items-center" id="userSection">
-          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -75,42 +73,8 @@
         <button class="filter-btn" data-filter="especial">Especiais</button>
       </div>
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-
-        <div class="col product-item" data-category="quente">
-          <div class="card product-card h-100"><div class="card-img-container"><img src="assets/images/products/americano.png" class="card-img-top" alt="Americano" /></div><div class="card-body d-flex flex-column"><h5 class="card-title">Americano</h5><p class="card-text">Um shot de expresso suavizado com água quente na medida certa.</p><div class="mt-auto"><p class="price">R$ 7,00</p><a href="product-details/americano.html" class="btn btn-details w-100">Ver detalhes</a></div></div></div>
+      <div id="product-grid" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
         </div>
-        <div class="col product-item" data-category="quente">
-          <div class="card product-card h-100"><div class="card-img-container"><img src="assets/images/products/cappuccino.png" class="card-img-top" alt="Cappuccino" /></div><div class="card-body d-flex flex-column"><h5 class="card-title">Cappuccino</h5><p class="card-text">O clássico italiano: expresso, leite vaporizado e espuma cremosa.</p><div class="mt-auto"><p class="price">R$ 10,00</p><a href="product-details/cappuccino.html" class="btn btn-details w-100">Ver detalhes</a></div></div></div>
-        </div>
-        <div class="col product-item" data-category="quente">
-          <div class="card product-card h-100"><div class="card-img-container"><img src="assets/images/products/espresso.png" class="card-img-top" alt="Espresso" /></div><div class="card-body d-flex flex-column"><h5 class="card-title">Espresso</h5><p class="card-text">O coração de todos os cafés: intenso, aromático e com uma crema perfeita.</p><div class="mt-auto"><p class="price">R$ 8,00</p><a href="product-details/espresso.html" class="btn btn-details w-100">Ver detalhes</a></div></div></div>
-        </div>
-        <div class="col product-item" data-category="quente">
-          <div class="card product-card h-100"><div class="card-img-container"><img src="assets/images/products/flatwhite.png" class="card-img-top" alt="Flat White" /></div><div class="card-body d-flex flex-column"><h5 class="card-title">Flat White</h5><p class="card-text">Expresso duplo com leite vaporizado, resultando em uma bebida aveludada.</p><div class="mt-auto"><p class="price">R$ 9,50</p><a href="product-details/flat-white.html" class="btn btn-details w-100">Ver detalhes</a></div></div></div>
-        </div>
-        <div class="col product-item" data-category="quente">
-          <div class="card product-card h-100"><div class="card-img-container"><img src="assets/images/products/latte.png" class="card-img-top" alt="Latte" /></div><div class="card-body d-flex flex-column"><h5 class="card-title">Latte</h5><p class="card-text">Uma dose de expresso misturada com uma quantidade generosa de leite vaporizado.</p><div class="mt-auto"><p class="price">R$ 9,50</p><a href="product-details/latte.html" class="btn btn-details w-100">Ver detalhes</a></div></div></div>
-        </div>
-        <div class="col product-item" data-category="quente">
-          <div class="card product-card h-100"><div class="card-img-container"><img src="assets/images/products/macchiato.png" class="card-img-top" alt="Macchiato" /></div><div class="card-body d-flex flex-column"><h5 class="card-title">Macchiato</h5><p class="card-text">Um expresso "manchado" com uma pequena quantidade de espuma de leite.</p><div class="mt-auto"><p class="price">R$ 10,50</p><a href="product-details/macchiato.html" class="btn btn-details w-100">Ver detalhes</a></div></div></div>
-        </div>
-        <div class="col product-item" data-category="quente">
-          <div class="card product-card h-100"><div class="card-img-container"><img src="assets/images/products/mocha.png" class="card-img-top" alt="Mocha" /></div><div class="card-body d-flex flex-column"><h5 class="card-title">Mocha</h5><p class="card-text">Uma deliciosa mistura de expresso, leite vaporizado e calda de chocolate.</p><div class="mt-auto"><p class="price">R$ 11,00</p><a href="product-details/mocha.html" class="btn btn-details w-100">Ver detalhes</a></div></div></div>
-        </div>
-
-        <div class="col product-item" data-category="gelado">
-          <div class="card product-card h-100"><div class="card-img-container"><img src="assets/images/products/coldbrew.webp" class="card-img-top" alt="Cold Brew" /></div><div class="card-body d-flex flex-column"><h5 class="card-title">Cold Brew</h5><p class="card-text">Café extraído a frio por 18 horas, resultando em uma bebida suave e refrescante.</p><div class="mt-auto"><p class="price">R$ 11,50</p><a href="product-details/cold-brew.html" class="btn btn-details w-100">Ver detalhes</a></div></div></div>
-        </div>
-        <div class="col product-item" data-category="gelado">
-          <div class="card product-card h-100"><div class="card-img-container"><img src="assets/images/products/icedcoffee.webp" class="card-img-top" alt="Iced Coffee" /></div><div class="card-body d-flex flex-column"><h5 class="card-title">Iced Coffee</h5><p class="card-text">Nosso café especial preparado e resfriado, servido com gelo.</p><div class="mt-auto"><p class="price">R$ 10,00</p><a href="product-details/iced-coffee.html" class="btn btn-details w-100">Ver detalhes</a></div></div></div>
-        </div>
-
-        <div class="col product-item" data-category="especial">
-          <div class="card product-card h-100"><div class="card-img-container"><img src="assets/images/products/affogato.webp" class="card-img-top" alt="Affogato" /></div><div class="card-body d-flex flex-column"><h5 class="card-title">Affogato</h5><p class="card-text">Café expresso artesanal sobre uma bola de sorvete de baunilha.</p><div class="mt-auto"><p class="price">R$ 12,00</p><a href="product-details/affogato.html" class="btn btn-details w-100">Ver detalhes</a></div></div></div>
-        </div>
-
-      </div>
     </div>
   </main>
 
@@ -168,9 +132,11 @@
           </div>
       </div>
   </footer>
+
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/header/header.js"></script>
+  <script src="js/products/products.js"></script>
   <script src="js/store/store.js"></script>
 </body>
 </html>
